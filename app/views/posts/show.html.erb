@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @post.name %>
+</p>
+
+<hr>
+
+<h4>Versions</h4>
+<ol>
+  <% @post.versions.each do |version| %>
+    <li>
+  	  <%= debug version.object_changes %>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
